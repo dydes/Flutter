@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:huitong/res/listData.dart';
-import '../Search.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -18,13 +17,14 @@ class _HomePageState extends State<HomePage> {
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // TODO: implement build`
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.search),
+          child: Text("搜索"),
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => SearchPage()));
+            Navigator.pushNamed(context, '/search',arguments: {
+              "id":123
+            });
           },
         ),
         body: ListView(
@@ -57,6 +57,13 @@ class HomeContent extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
+                    trailing: IconButton(
+                      icon: Icon(Icons.add_shopping_cart),
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/product');
+                      },
+                      splashColor: Colors.orange,
+                    )
                   )
                 ],
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'routers/Routes.dart';
+import 'pages/Tabs.dart';//得引入抽离的组件才能生效
+import 'pages/Form.dart';
+import 'pages/Search.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,10 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-        initialRoute: '/',
-        onGenerateRoute:onGenerateRoute,
+        home: Tabs(),
+        routes: {//全局配置命名路由
+          '/form':(context)=>FormPage(),
+          '/search':(context)=>SearchPage(),
+        },
         theme: ThemeData(
-            //改主题
+          //改主题
             primarySwatch: Colors.amber));
   }
 }
