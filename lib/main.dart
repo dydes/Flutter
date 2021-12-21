@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      debugShowCheckedModeBanner: false,//去掉debug图标
         initialRoute: '/',
         onGenerateRoute:onGenerateRoute,
         theme: ThemeData(

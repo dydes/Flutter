@@ -8,6 +8,7 @@ import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
+import '../pages/AppBarDemo.dart';
 
 //配置路由
 final routes={
@@ -20,6 +21,7 @@ final routes={
   '/registerFirst':(context)=>RegisterFirstPage(),
   '/registerSecond':(context)=>RegisterSecondPage(),
   '/registerThird':(context)=>RegisterThirdPage(),
+  '/appBarDemo':(context)=>AppBarDemoPage(),
 };
 
 //固定写法

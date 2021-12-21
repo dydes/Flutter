@@ -22,9 +22,7 @@ class HomeContent extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: Text("搜索"),
           onPressed: () {
-            Navigator.pushNamed(context, '/search',arguments: {
-              "id":123
-            });
+            Navigator.pushNamed(context, '/search', arguments: {"id": 123});
           },
         ),
         body: ListView(
@@ -40,31 +38,35 @@ class HomeContent extends StatelessWidget {
                         fit: BoxFit.cover,
                       )),
                   ListTile(
-                    leading: ClipOval(
-                      child: Image.network(
-                        value["imageUrl"],
-                        fit: BoxFit.cover,
-                        height: 60,
-                        width: 60,
+                      leading: ClipOval(
+                        child: InkWell(
+                          child: Image.network(
+                            value["imageUrl"],
+                            fit: BoxFit.cover,
+                            height: 60,
+                            width: 60,
+                          ),
+                          onTap: () {
+                            Navigator.pushNamed(context,'/appBarDemo');
+                          },
+                        )
                       ),
-                    ),
-                    title: Text(
-                      value["title"],
-                      style: TextStyle(fontSize: 28),
-                    ),
-                    subtitle: Text(
-                      value["description"],
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    trailing: IconButton(
-                      icon: Icon(Icons.add_shopping_cart),
-                      onPressed: (){
-                        Navigator.pushNamed(context, '/product');
-                      },
-                      splashColor: Colors.orange,
-                    )
-                  )
+                      title: Text(
+                        value["title"],
+                        style: TextStyle(fontSize: 28),
+                      ),
+                      subtitle: Text(
+                        value["description"],
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      trailing: IconButton(
+                        icon: Icon(Icons.add_shopping_cart),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/product');
+                        },
+                        splashColor: Colors.orange,
+                      ))
                 ],
               ),
             );
