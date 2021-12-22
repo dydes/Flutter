@@ -47,7 +47,7 @@ class HomeContent extends StatelessWidget {
                             width: 60,
                           ),
                           onTap: () {
-                            Navigator.pushNamed(context,'/appBarDemo');
+                            Navigator.pushNamed(context,'/tabBarController');
                           },
                         )
                       ),

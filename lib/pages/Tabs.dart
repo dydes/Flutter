@@ -53,6 +53,54 @@ class _TabsState extends State<Tabs> {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: [
+                Expanded(
+                  child: UserAccountsDrawerHeader(
+                    accountName: Text("黄大仙"),
+                    accountEmail: Text("huangdaxian@huitongjy.com"),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage("https://s3.bmp.ovh/imgs/2021/12/08334c4727e6d33d.png"),
+                    ),
+                    otherAccountsPictures: [
+                      //Image.network("image: image")//放在头像右边
+                    ],
+                  ),)
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text("我的空间"),
+            ),
+            Divider(),//分割线
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: Text("用户中心"),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/userCenter');
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text("设置"),
+            ),
+          ],
+        )
+      ),
+      endDrawer: Drawer(
+        child: Text('左侧侧边栏'),
+      ),
     );
   }
 }
