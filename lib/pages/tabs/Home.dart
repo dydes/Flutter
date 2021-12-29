@@ -63,7 +63,7 @@ class HomeContent extends StatelessWidget {
                       trailing: IconButton(
                         icon: Icon(Icons.add_shopping_cart),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/product');
+                          Navigator.pushNamed(context, '/checkBox');
                         },
                         splashColor: Colors.orange,
                       ))

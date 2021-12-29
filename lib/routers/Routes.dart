@@ -11,6 +11,8 @@ import '../pages/user/RegisterThird.dart';
 import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/user/UserCenter.dart';
+import '../pages/Textfield.dart';
+import '../pages/CheckBox.dart';
 
 //配置路由
 final routes={
@@ -26,6 +28,8 @@ final routes={
   '/appBarDemo':(context)=>AppBarDemoPage(),
   '/tabBarController':(context)=>TabBarControllerPage(),
   '/userCenter':(context)=>UserCenterPage(),
+  '/textField':(context)=>TextFieldDemoPage(),
+  '/checkBox':(context)=>CheckBoxDemoPage(),
 };
 
 //固定写法
