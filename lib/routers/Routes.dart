@@ -13,6 +13,8 @@ import '../pages/TabBarController.dart';
 import '../pages/user/UserCenter.dart';
 import '../pages/Textfield.dart';
 import '../pages/CheckBox.dart';
+import '../pages/Radio.dart';
+import '../pages/FormDemo.dart';
 
 //配置路由
 final routes={
@@ -30,6 +32,8 @@ final routes={
   '/userCenter':(context)=>UserCenterPage(),
   '/textField':(context)=>TextFieldDemoPage(),
   '/checkBox':(context)=>CheckBoxDemoPage(),
+  '/radio':(context)=>RadioDemoPage(),
+  '/formDemo':(context)=>FormDemoPage(),
 };
 
 //固定写法
