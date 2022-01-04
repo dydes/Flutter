@@ -16,6 +16,8 @@ import '../pages/CheckBox.dart';
 import '../pages/Radio.dart';
 import '../pages/FormDemo.dart';
 import '../pages/DatePicker.dart';
+import '../pages/Swiper.dart';
+import '../pages/Dialog.dart';
 
 //配置路由
 final routes={
@@ -36,6 +38,8 @@ final routes={
   '/radio':(context)=>RadioDemoPage(),
   '/formDemo':(context)=>FormDemoPage(),
   '/datePicker':(context)=>DatePickerDemo(),
+  '/swiper':(context)=>SwiperPage(),
+  '/dialog':(context)=>DialogPage(),
 };
 
 //固定写法
