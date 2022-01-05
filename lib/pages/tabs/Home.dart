@@ -39,17 +39,17 @@ class HomeContent extends StatelessWidget {
                       )),
                   ListTile(
                       leading: ClipOval(
-                        child: InkWell(
-                          child: Image.network(
-                            value["imageUrl"],
-                            fit: BoxFit.cover,
-                            height: 60,
-                            width: 60,
-                          ),
-                          onTap: () {
-                            Navigator.pushNamed(context,'/tabBarController');
-                          },
-                        )
+                          child: InkWell(
+                            child: Image.network(
+                              value["imageUrl"],
+                              fit: BoxFit.cover,
+                              height: 60,
+                              width: 60,
+                            ),
+                            onTap: () {
+                              Navigator.pushNamed(context,'/tabBarController');
+                            },
+                          )
                       ),
                       title: Text(
                         value["title"],
@@ -63,7 +63,7 @@ class HomeContent extends StatelessWidget {
                       trailing: IconButton(
                         icon: Icon(Icons.add_shopping_cart),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/dialog');
+                          Navigator.pushNamed(context, '/get-post');
                         },
                         splashColor: Colors.orange,
                       ))
