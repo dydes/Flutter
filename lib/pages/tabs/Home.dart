@@ -60,17 +60,20 @@ class HomeContent extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      trailing: IconButton(
+                      trailing:
+                      IconButton(
                         icon: Icon(Icons.add_shopping_cart),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/get-post');
+                          Navigator.pushNamed(context, '/sqflite');
                         },
                         splashColor: Colors.orange,
-                      ))
+                      ),
+                  )
                 ],
               ),
             );
           }).toList(),
+
         ));
   }
 }

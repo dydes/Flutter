@@ -20,6 +20,7 @@ import '../pages/Swiper.dart';
 import '../pages/Dialog.dart';
 import '../pages/get-post.dart';
 import '../pages/Http.dart';
+import '../pages/Sqflite.dart';
 
 //配置路由
 final routes={
@@ -44,6 +45,7 @@ final routes={
   '/dialog':(context)=>DialogPage(),
   '/http':(context)=>HttpPage(),
   '/get-post':(context)=>getPostPage(),
+  '/sqflite':(context)=>SqflitePage(),
 };
 
 //固定写法

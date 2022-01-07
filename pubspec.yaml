@@ -39,6 +39,7 @@ dependencies:
   fluttertoast: ^8.0.8
   http: ^0.13.4
   dio: ^4.0.4
+  sqflite: ^2.0.1
 
 dev_dependencies:
   flutter_test:
